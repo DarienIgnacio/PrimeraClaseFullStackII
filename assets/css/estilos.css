@@ -4,8 +4,8 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        color: #16324f;
-        background-color: #f4f8fb;
+        color: #000000;
+        background-color: #ff0000;
     }
     header,
     main,
@@ -13,8 +13,8 @@
         padding: 1.5rem;
     }
     header {
-        color: #241e58;
-        background-color: #00ccff;
+        color: #ff0000;
+        background-color: #000000;
     }
     button {
         padding: 0.75rem 1rem;
@@ -23,4 +23,56 @@
         border: 0;
         border-radius: 0.4rem;
         cursor: pointer;
+}
+
+.cabecera-sitio,
+.menu,
+.grilla-tarjetas {
+  display: flex;
+  gap: 1rem;
+}
+
+.cabecera-sitio {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  padding: 0;
+  list-style: none;
+}
+
+.marca,
+.menu a,
+.pie-sitio a {
+  color: inherit;
+}
+
+main {
+  max-width: 70rem;
+  margin-inline: auto;
+}
+
+.grilla-tarjetas {
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  flex: 1 1 18rem;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.salto-contenido {
+  position: absolute;
+  left: -10000px;
+}
+
+.salto-contenido:focus {
+  position: static;
 }
