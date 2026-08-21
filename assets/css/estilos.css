@@ -66,6 +66,12 @@ section + section {
 }
 
 /* 3. Estructura */
+.pie-sitio{
+  padding: 1rem max(1rem, calc((100% - var(--ancho-contenido)) / 2));
+  color: #ffffff;
+  background: var(--color-primario-oscuro);
+  text-align: center;
+}
 
 /* 4. Navegación */
 .cabecera-sitio {

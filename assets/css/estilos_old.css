@@ -50,6 +50,24 @@
   display: inline-block; 
 }
 
+.pie-sitio {
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 3rem; /* Espaciado externo para separarlo del contenido principal */
+  border-top: 4px solid #eeff00; /* Línea divisoria de alto contraste */
+  padding: 2rem 1.5rem;
+}
+
+.pie-sitio a {
+  color: #eeff00; /* Texto amarillo fosforescente sobre fondo negro */
+  text-decoration: underline; /* Facilita la identificación visual de enlaces */
+}
+
+.pie-sitio a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 .menu a:hover {
   color: #eeff00;
   transform: translateY(-3px);
