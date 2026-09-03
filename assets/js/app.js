@@ -132,6 +132,17 @@ function crearTarjeta(actividad) {
   const cupos = document.createElement("p");
   cupos.textContent = `Cupos: ${actividad.cupos}`;
 
+  if (actividad.cupos > 0 && actividad.cupos <= 5) {
+  cupos.textContent = `¡Últimos ${actividad.cupos} cupos!`;
+  cupos.classList.add("aviso-cupos");
+  }
+
+  if (actividad.cupos === 0) {
+    cupos.textContent = "Actividad completa";
+    cupos.classList.add("actividad-completa");
+  }
+
+
   tarjeta.appendChild(nombre);
   tarjeta.appendChild(categoria);
   tarjeta.appendChild(cupos);
@@ -143,5 +154,36 @@ for (const actividad of actividades) {
   crearTarjeta(actividad);
 }
 
+function mostrarActividades(lista) {
+  cartelera.replaceChildren();
+
+  for (const actividad of lista) {
+    crearTarjeta(actividad);
+  }
+}
+
+mostrarActividades(actividades);
+
+const botonTodas = document.querySelector("#mostrar-todas");
+const botonDisponibles = document.querySelector("#mostrar-disponibles");
+
+function mostrarTodas() {
+  mostrarActividades(actividades);
+}
+
+function mostrarDisponibles() {
+  const disponibles = [];
+
+  for (const actividad of actividades) {
+    if (actividad.cupos > 0) {
+      disponibles.push(actividad);
+    }
+  }
+
+  mostrarActividades(disponibles);
+}
+
+botonTodas.addEventListener("click", mostrarTodas);
+botonDisponibles.addEventListener("click", mostrarDisponibles);
 
 

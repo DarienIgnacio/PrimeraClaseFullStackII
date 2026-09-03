@@ -319,3 +319,13 @@ textarea:focus {
   }
 }
 
+.aviso-cupos {
+  color: #8a4b08;
+  font-weight: 700;
+}
+
+.actividad-completa {
+  color: #b42318;
+  font-weight: 700;
+}
+
